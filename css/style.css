@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -23,14 +23,15 @@ header{
     justify-content: space-between;
 }
 
-header .logo{
-    font-weight: bolder;
-    font-size: 25px;
-    color: #333;
+.navbar{
+    width: 100%;
 }
 
 header .navbar ul{
+    width: 100%;
     list-style: none;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 header .navbar ul li{
@@ -130,6 +131,43 @@ header label{
 
 }
 
-ol{
+section ol{
     list-style: decimal;
+    padding: 1em;
+    margin: 1em;
+}
+
+.brødtekst {
+    padding: 5em;
+    padding-top: 1em;
+    margin: 5em;
+    margin-top: 1em;
+}
+
+.logo-container{
+    padding-top: 1em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 17.5em;
+    height: 12.5em;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1.5em;
+}
+
+h3{
+    font-size: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+h4{
+    padding-bottom: 0.5em;
 }
