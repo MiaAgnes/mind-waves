@@ -131,7 +131,7 @@ header label{
 
 }
 
-section ol{
+main ol{
     list-style: decimal;
     padding: 1em;
     margin: 1em;
