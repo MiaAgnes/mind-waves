@@ -15,8 +15,8 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background: #ffaa0060;
+    box-shadow: 0 5px 10px rgba(255, 168, 0, 0.4);
     padding: 10px 7%;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ header .navbar ul li a{
     padding: 18px;
     color: #333;
     display: block;
-    color: #45B6FE;
+    color: #07C0FF;
 }
 
 header .navbar ul li a:hover{
