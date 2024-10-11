@@ -138,6 +138,19 @@ main ol{
     margin: 1em;
 }
 
+article ul{
+    padding: 1em;
+    margin: 1em;
+}
+
+.brødtekst-forside {
+    padding: 5em;
+    padding-top: 1em;
+    margin: 5em;
+    margin-top: 1em;
+    text-align: center;
+}
+
 .brødtekst {
     padding: 5em;
     padding-top: 1em;
@@ -172,4 +185,97 @@ h3{
 h4{
     padding-bottom: 0.5em;
     padding-top: 0.5em;
+}
+
+.carousel{
+    width: 80vw;  /* 80% af skærmens bredde */
+    height: 60vh; /* 60% af skærmens højde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;  /* Centerer carousel'en vandret */
+    overflow: hidden;
+    position: relative;  /* For at placere pile eller knapper */
+}
+
+.carousel input {
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item{
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.carousel img{
+    width: 100%;  /* Billedet fylder hele containerens bredde */
+    height: 100%; /* Billedet fylder hele containerens højde */
+    object-fit: cover; /* Skærer billedet til, så det passer i containeren */
+    display: block;
+}
+
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0 0 0 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+figcaption{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    background: rgba(0 0 0 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navigation{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+label{
+    background-color: rgba(0 0 0 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carousel input#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+.carousel input#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+.carousel input#slide3:checked ~ .slides {
+    transform: translateX(-200%);
 }
