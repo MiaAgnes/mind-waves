@@ -12,6 +12,9 @@
         <label for="menu-bar">Menu</label>
 
         <nav class="navbar">
+            <article class="logo-container">
+                <a href="index.html"><img src="img/logo.jpg" class="logo" alt="Logo med teksten Mind Waves"></a>
+            </article>
             <ul>
                 <li><a href="">Artikler fra Mind Waves</a>
                 <ul>
@@ -50,57 +53,55 @@
         </nav>
     </header>
 
-    <article class="logo-container">
-        <a href="index.html"><img src="img/logo.jpg" class="logo" alt="Logo med teksten Mind Waves"></a>
-    </article>
-
     <article>
-        <h1>Er du presset? Du er ikke alene!</h1>
+        <h1 class="h1-forside">Er du presset? Du er ikke alene!</h1>
     </article>
 
-    <main class="carousel">
+    <main>
+        <article class="carousel">
+            <article class="carousel-inner">
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <article class="carousel-item">
+                    <img src="img/slide1.jpg">
+                    <div>
+                        <h5>Studerende uden balance: Når arbejde, studie og fritid kolliderer</h5>
+                        <p>Som studerende kan det ofte føles, som om hele verden forventer, at du skal jonglere studier, arbejde, venner og fritidsaktiviteter – alt sammen uden at miste overblikket. Men hvad gør man, når det hele begynder at kollidere?</p>
+                        <a href="artikel-1.html" class="button">LÆS MERE</a>
+                    </div>
+                </article>
 
-        <input type="radio" name="carousel" id="slide1" checked>
-        <input type="radio" name="carousel" id="slide2">
-        <input type="radio" name="carousel" id="slide3">
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <article class="carousel-item">
+                    <img src="img/slide2.jpg">
+                    <div>
+                        <h5>Balancen mellem studie og sport: Få tid til din sport</h5>
+                        <p>At balancere studie og sport kan være udfordrende for mange studerende, der både ønsker at præstere godt i skolen og opretholde en sund livsstil gennem sport. Det er dog muligt at finde en god rytme, hvor begge aspekter får den opmærksomhed, de fortjener, uden at stresse kroppen.</p>
+                        <a href="artikel-2.html" class="button">LÆS MERE</a>
+                    </div>
+                </article>
 
-        <section class="slides">
-            <article class="carousel-item">
-                <figure>
-                    <img src="img/test1.jpg" alt="">
-                    <figcaption></figcaption>
-                </figure>
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <article class="carousel-item">
+                    <img src="img/slide3.jpg">
+                    <div>
+                        <h5>Selvforkælelse: Lær at holde pauser og prioritere din tid</h5>
+                        <p>I en travl hverdag fyldt med studier, arbejde og forpligtelser kan det være svært at finde tid til sig selv. Men det er netop i disse travle perioder, at selvforkælelse bliver vigtig. At tage pauser og prioritere din tid på en måde, der også gavner dit mentale og fysiske helbred, kan være afgørende for at undgå overbelastning og stress.</p>
+                        <a href="artikel-3.html" class="button">LÆS MERE</a>
+                    </div>
+                </article>
+            
+                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                <label for="carousel-2" class="carousel-control next control-1">›</label>
+                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                <label for="carousel-3" class="carousel-control next control-2">›</label>
+                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                <label for="carousel-1" class="carousel-control next control-3">›</label>
+                </article>
             </article>
+        
+        <section>
 
-            <article class="carousel-item">
-                <figure>
-                    <img src="img/test2.jpg" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </article>
-
-            <article class="carousel-item">
-                <figure>
-                    <img src="img/test3.jpg" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </article>
-
-            <article class="navigation">
-                <label for="slide3" class="prev">&#10094;</label>
-                <label for="slide2" class="next">&#10095;</label>
-            </article>
-
-            <article class="navigation">
-                <label for="slide1" class="prev">&#10094;</label>
-                <label for="slide3" class="next">&#10095;</label>
-            </article>
-
-            <article class="navigation">
-                <label for="slide2" class="prev">&#10094;</label>
-                <label for="slide1" class="next">&#10095;</label>
-            </article>
-
+           
         </section>
     </main>
 

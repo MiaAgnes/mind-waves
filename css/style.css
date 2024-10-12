@@ -15,15 +15,27 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background: #ffaa0060;
-    box-shadow: 0 5px 10px rgba(255, 168, 0, 0.4);
-    padding: 10px 7%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar{
+.logo-container{
+   flex: 1;
+}
+
+.logo{
+    width: 10em;
+    height: 7em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
     width: 100%;
 }
 
@@ -45,7 +57,7 @@ header .navbar ul li a{
     padding: 18px;
     color: #333;
     display: block;
-    color: #07C0FF;
+    color: #45B6FE;
 }
 
 header .navbar ul li a:hover{
@@ -139,6 +151,7 @@ main ol{
 }
 
 article ul{
+    list-style: none;
     padding: 1em;
     margin: 1em;
 }
@@ -158,22 +171,15 @@ article ul{
     margin-top: 1em;
 }
 
-.logo-container{
-    padding-top: 1em;
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-}
-
-.logo{
-    width: 17.5em;
-    height: 12.5em;
-}
-
 h1{
     text-align: center;
     font-size: 2em;
     padding-bottom: 1.5em;
+}
+
+.h1-forside{
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
 }
 
 h3{
@@ -187,95 +193,119 @@ h4{
     padding-top: 0.5em;
 }
 
-.carousel{
-    width: 80vw;  /* 80% af skærmens bredde */
-    height: 60vh; /* 60% af skærmens højde */
+.carousel {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;  /* Centerer carousel'en vandret */
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
     overflow: hidden;
-    position: relative;  /* For at placere pile eller knapper */
 }
 
-.carousel input {
-    display: none;
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
 }
 
-.slides{
-    display: flex;
-    width: 300%;
-    transition: transform 0.5s ease-in-out;
+.carousel-item {
+    position: absolute;
+    width: 1100px;
+    height: 550px; 
+    max-width: 1200px; 
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
 }
 
-.carousel-item{
+.carousel-item img {
+    display: block;
+    height: auto;
     width: 100%;
-    flex: 1 0 100%;
 }
 
-.carousel img{
-    width: 100%;  /* Billedet fylder hele containerens bredde */
-    height: 100%; /* Billedet fylder hele containerens højde */
-    object-fit: cover; /* Skærer billedet til, så det passer i containeren */
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
     display: block;
 }
 
-.prev, .next{
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+div {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: rgba(0 0 0 0.5);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Sort med gennemsigtighed */
     color: white;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
+    padding: 20px;
+    width: 80%;
+    height: 35%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h5{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+section p {
+    margin: 10px 0;
+    font-size: 20px;
 }
 
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-figcaption{
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
+.button {
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #FFA900; /* Knappens farve */
     color: white;
-    background: rgba(0 0 0 0.5);
-    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
-.navigation{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-label{
-    background-color: rgba(0 0 0 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.carousel input#slide1:checked ~ .slides {
-    transform: translateX(0%);
-}
-
-.carousel input#slide2:checked ~ .slides {
-    transform: translateX(-100%);
-}
-
-.carousel input#slide3:checked ~ .slides {
-    transform: translateX(-200%);
+.button:hover {
+    background-color: #e19615; /* Hover-effekt på knappen */
 }
