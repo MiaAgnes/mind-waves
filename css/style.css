@@ -158,7 +158,7 @@ article ul{
 }
 
 ol li{
-    padding-top: 1.5em;
+    padding-top: 1em;
 }
 
 .brødtekst-forside {
@@ -371,4 +371,22 @@ form button {
 
 form button:hover {
     background-color: #0056b3;
+}
+
+.article-text{
+    flex: 1;
+}
+
+.article-img-container{
+    width: 47%;
+    height: fit-content;
+}
+
+.article-img{
+    width: 100%
+}
+
+.article-section{
+    display: flex;
+    flex-direction: row-reverse;
 }
