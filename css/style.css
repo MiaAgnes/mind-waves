@@ -157,6 +157,10 @@ article ul{
     margin: 1em;
 }
 
+ol li{
+    padding-top: 1.5em;
+}
+
 .brødtekst-forside {
     padding: 5em;
     padding-top: 34em;
