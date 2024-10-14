@@ -373,20 +373,25 @@ form button:hover {
     background-color: #0056b3;
 }
 
-.article-text{
-    flex: 1;
+.article-text-left{
+    width: 50%;
+    padding-right: 10px;
 }
 
-.article-img-container{
-    width: 47%;
-    height: fit-content;
+.article-img-container-right{
+    width: 50%;
+    height: auto;
+    object-fit: fill;
 }
 
-.article-img{
-    width: 100%
-}
-
-.article-section{
+.article-img-right{
     display: flex;
-    flex-direction: row-reverse;
+    height: 350px;
+    width: 350px;
+}
+
+.article-section-right{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
