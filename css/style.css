@@ -190,7 +190,6 @@ h1{
 h3{
     font-size: 1.5em;
     padding-top: 1.5em;
-    padding-bottom: 0.5em;
 }
 
 h4{
@@ -302,9 +301,17 @@ h5{
 
 section p {
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 19px;
+    padding-top: 30px;
 }
 
+p {
+    font-size: 19px;
+}
+
+li{
+    font-size: 17px;
+}
 
 .button {
     display: inline-block;
@@ -373,13 +380,69 @@ form button:hover {
     background-color: #0056b3;
 }
 
-section.top-section {
+.article-middle-section {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    flex-direction: row;
+}
+ 
+.article-bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+ 
+.float-left-1 {
+    display: flex;
+    width: 50%;
+    flex-direction: column; /* Ensure the ol takes full height */
+}
+ 
+.float-right-1 {
+    display: flex;
+    width: 50%;
+    align-items: stretch; /* Stretch the image container to match the height of the ol container */
+}
+ 
+.article-img-container-right-1 {
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    height: 540px; /* Make the container take the full height */
+    width: 540px;
+    padding-top: 80px;
+}
+ 
+.article-img-1 {
+    height: 100%; /* Make the image height 100% of the container */
+    object-fit: contain; /* Ensure the image scales properly */
 }
 
-section.bottom-section {
+
+
+.float-left-2 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 50%;
+    flex-direction: column; /* Ensure the ol takes full height */
+}
+ 
+.float-right-2 {
+    display: flex;
+    width: 50%;
+    align-items: stretch; /* Stretch the image container to match the height of the ol container */
+}
+
+ 
+.article-img-container-right-2 {
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    height: 540px; /* Make the container take the full height */
+    width: 540px;
+    padding-top: 110px;
+}
+ 
+.article-img-2 {
+    height: 100%; /* Make the image height 100% of the container */
+    object-fit: contain; /* Ensure the image scales properly */
 }
