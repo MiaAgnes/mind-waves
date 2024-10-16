@@ -179,7 +179,7 @@ ol li{
 h1{
     text-align: center;
     font-size: 2em;
-    padding-bottom: 1.5em;
+    padding-bottom: 1em;
 }
 
 .h1-forside{
@@ -189,7 +189,8 @@ h1{
 
 h3{
     font-size: 1.5em;
-    padding-top: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 h4{
@@ -201,6 +202,18 @@ h6{
     font-size: 1.4em;
     padding-top: 1.5em;
     padding-bottom: 0.5em;
+}
+
+main p{
+    font-size: 18px;
+}
+
+section p{
+    font-size: 18px;
+}
+
+main ol h4{
+    font-size: 20px;
 }
 
 .carousel {
@@ -285,7 +298,7 @@ div {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6); /* Sort med gennemsigtighed */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: white;
     padding: 20px;
     width: 80%;
@@ -302,7 +315,6 @@ h5{
 section p {
     margin: 10px 0;
     font-size: 19px;
-    padding-top: 30px;
 }
 
 p {
@@ -315,13 +327,13 @@ li{
 
 .button {
     display: inline-block;
-    padding: 7px 20px;
+    padding: 6px 20px;
     background-color: #FFA900; /* Knappens farve */
     color: white;
     text-decoration: none;
     font-size: 14px;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .button:hover {
@@ -380,69 +392,59 @@ form button:hover {
     background-color: #0056b3;
 }
 
-.article-middle-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the start */
-    flex-direction: row;
-}
- 
 .article-bottom-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
 }
- 
-.float-left-1 {
-    display: flex;
-    width: 50%;
-    flex-direction: column; /* Ensure the ol takes full height */
-}
- 
-.float-right-1 {
-    display: flex;
-    width: 50%;
-    align-items: stretch; /* Stretch the image container to match the height of the ol container */
-}
- 
-.article-img-container-right-1 {
-    display: flex;
-    align-items: center; /* Center the image vertically */
-    height: 540px; /* Make the container take the full height */
-    width: 540px;
-    padding-top: 80px;
-}
- 
-.article-img-1 {
-    height: 100%; /* Make the image height 100% of the container */
-    object-fit: contain; /* Ensure the image scales properly */
+
+.float-right {
+    float: right;
+    padding-left: 5em;
+    padding-right: 5em;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-
-
-.float-left-2 {
-    display: flex;
-    width: 50%;
-    flex-direction: column; /* Ensure the ol takes full height */
-}
- 
-.float-right-2 {
-    display: flex;
-    width: 50%;
-    align-items: stretch; /* Stretch the image container to match the height of the ol container */
+.float-left {
+    float: left;
+    padding-left: 5em;
+    padding-right: 5em;
+    justify-content: flex-start;
 }
 
- 
-.article-img-container-right-2 {
+.article-middle-section {
     display: flex;
-    align-items: center; /* Center the image vertically */
-    height: 540px; /* Make the container take the full height */
-    width: 540px;
-    padding-top: 110px;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 1em; 
 }
- 
-.article-img-2 {
-    height: 100%; /* Make the image height 100% of the container */
-    object-fit: contain; /* Ensure the image scales properly */
+
+.article-middle-section > ol {
+    flex: 1 1 auto; 
+    min-width: 300px; 
+}
+
+.article-img-container {
+    flex: 0 0 200px; 
+    display: flex;
+    align-items: flex-start; 
+}
+
+.article-img {
+    max-height: 25em; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+.article-middle-section > ol > li {
+    margin-bottom: 0.5em; 
+}
+
+footer{
+    background-color:#45B6FE; 
+    padding: 20px; 
+    text-align: center;
 }
